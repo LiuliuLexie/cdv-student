@@ -1,0 +1,40 @@
+html,
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.heading-theme {
+    color: beige;
+    text-align: center;
+    font-size: large;
+}
+
+#click {
+    position: absolute;
+    top: 115px;
+    left: 733px;
+}
+
+.dialog {
+    color: beige;
+    width: 20px;
+    height: 20px;
+}
+
+.flex-container>div {
+    background-color: #f1f1f1;
+    width: 40px;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* insert a flexbox to avoid chaos when the browser window is being resized  */
+    background-color: black;
+    margin: 50px;
+}
