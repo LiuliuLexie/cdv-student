@@ -1,4 +1,4 @@
-## Coding-Foundation :U+1F649:
+## Coding-Foundation :hear_no_evil:
 
 In this exercise 
 - I encountered the foundational setup of GitHub and VS Code
