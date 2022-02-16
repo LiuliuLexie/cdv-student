@@ -1,0 +1,27 @@
+        .head {
+            color: black;
+            text-align: center;
+        }
+        
+        .note {
+            color: gray;
+            text-align: left;
+            margin-left: 50px;
+        }
+        
+        .bar {
+            height: 40px;
+            width: 50px;
+            background-color: black;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        
+        .bar p {
+            color: rgb(255, 255, 255);
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 7px;
+            margin: 5px;
+            font-size: 25px;
+        }
