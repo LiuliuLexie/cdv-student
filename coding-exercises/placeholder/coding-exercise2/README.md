@@ -1,4 +1,4 @@
-## Coding-Foundation :national_park:
+## Coding-Exercise2 :national_park:
 
 In this exercise 
 - I learned about the basic data collecting and visualization progress
