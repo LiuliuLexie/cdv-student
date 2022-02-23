@@ -1,0 +1,16 @@
+#viz {
+    border: 1px black solid;
+    background-color: rgb(196, 231, 243);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* why the flex does not work */
+}
+
+
+/* #viz-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    margin: 50px;
+} */
