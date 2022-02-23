@@ -14,7 +14,17 @@ let viz = d3.select("#viz-container")
 function xPos(d, i) {
     // console.log("D3 passed", d, "into my xPos function!");
     // console.log("D3 also passed", i);
-    return 150 * i + 80;
+    let xRow;
+    xRow = Math.floor(i % 7);
+    return xRow * 200 + 120;
+}
+
+function yPos(d, i) {
+    // console.log("D3 passed", d, "into my xPos function!");
+    // console.log("D3 also passed", i);
+    let yRow;
+    yRow = Math.floor(i / 7);
+    return yRow * 200 + 100;
 }
 
 // //how to do with yPos if wrap is used?
@@ -59,7 +69,7 @@ function mouthRadius(d, i) {
         radiusNum = 3;
     }
     console.log(radiusNum);
-    return radiusNum * 25 + 20;
+    return radiusNum * 15 + 20;
 }
 
 function mouthColor(d, i) {
@@ -89,7 +99,7 @@ function mouthColor(d, i) {
 
 function dateText(d, i) {
     let underText;
-    underText = "2022" + d.date + ": " + d.time;
+    underText = "22" + d.date + ": " + d.time;
     console.log(underText); //calls
     return underText;
 }
@@ -118,9 +128,18 @@ function datexPos(d, i) {
         radiusNum = 3;
     }
     console.log(radiusNum);
-    //mouthRadius: radiusNum * 25 + 20; 
-    // xPos= 150 * i + 80;
-    return (150 * i + 80) - (radiusNum * 25 + 20);
+    //mouthRadius: radiusNum * 20 + 20; 
+    let xRow;
+    xRow = Math.floor(i % 7);
+    //xPos: xRow * 200 + 140;
+    return (xRow * 200 + 120) - (radiusNum * 15 + 20);
+}
+
+function dateyPos(d, i) {
+    let yRow;
+    yRow = Math.floor(i / 7);
+    // yPos: yRow * 200 + 120;
+    return yRow * 200 + 200;
 }
 
 function lipRadius(d, i) {
@@ -140,7 +159,7 @@ function lipRadius(d, i) {
     }
 
     console.log(lipUpdown);
-    return lipUpdown * (radiusNum * 25 + 20) + 10;
+    return lipUpdown * (radiusNum * 15 + 20) + 10;
 }
 
 function gotData(newData) {
@@ -151,15 +170,16 @@ function gotData(newData) {
         // .style("display", flex)
         // .style("flex-wrap", wrap)
         .attr("cx", xPos)
-        .attr("cy", 400)
+        .attr("cy", yPos)
         .attr("r", mouthRadius)
         .attr("fill", mouthColor);
 
     viz.selectAll("text").data(newData).enter().append("text")
         .text(dateText)
         .attr("x", datexPos)
-        .attr("y", 510)
-        .attr("fill", "black");
+        .attr("y", dateyPos)
+        .attr("fill", "black")
+        //.style("text-align", "center");
 
     //tried to draw a semicircle but failed (here's the link to the tutorial I referred to:https://www.geeksforgeeks.org/how-to-draw-a-semi-circle-using-html-and-css/)
     //
@@ -176,10 +196,99 @@ function gotData(newData) {
 
     viz.selectAll("lipcircle").data(newData).enter().append("circle")
         .attr("cx", xPos)
-        .attr("cy", 400)
+        .attr("cy", yPos)
         .attr("r", lipRadius)
         .attr("fill", "transparent")
         .attr("style", "fill-opacity:0; stroke:red;stroke-width:3px");
+
+    viz.selectAll("title").data(newData).enter().append("text")
+        .text("SWEAR WORDS")
+        .attr("x", 1030)
+        .attr("y", 800)
+        .attr("fill", "black")
+        .attr("style", "font-weight: bold")
+        .attr("style", "font-size: 70px");
+
+    viz.selectAll("key1").data(newData).enter().append("text")
+        .text("Circle Size - Where : small/medium/large - In-person/WeChat/Weibo")
+        .attr("x", 1035)
+        .attr("y", 660)
+        .attr("fill", "black")
+        .attr("style", "font-size: 18px");
+
+    viz.selectAll("key2").data(newData).enter().append("text")
+        .text("⭕️ - consciousness : exist - conscious ; not exist - unconscious")
+        .attr("x", 1035)
+        .attr("y", 685)
+        .attr("style", "font-size: 18px");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Circle Color - Emotion : ")
+        .attr("x", 1035)
+        .attr("y", 710)
+        .attr("style", "font-size: 18px");
+
+    //i failed to include the key in the container in html, so below are many lines that needs to be improved
+    //
+    //<div class="key"><span style="color:#F5B041">enjoyment</span><span style="color:#E74C3C">anger</span><span style="color:#AF7AC5">disgust</span><span style="color:#85C1E9">sadness</span></div>
+    //<div class = "key" > < span style = "color:#A3E4D7" > Questioning < /span><span style="color:#F7DC6F">surprise/shock < /span><span style="color:#566573">fear</span > < span style = "color:#ABB2B9" > none < /span></div>
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Happiness")
+        .attr("x", 1215)
+        .attr("y", 710)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#F5B041");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Anger")
+        .attr("x", 1295)
+        .attr("y", 710)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#E74C3C");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Disgust")
+        .attr("x", 1345)
+        .attr("y", 710)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#AF7AC5");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Sadness")
+        .attr("x", 1405)
+        .attr("y", 710)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#85C1E9");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Questioning")
+        .attr("x", 1215)
+        .attr("y", 735)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#A3E4D7");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Surprise")
+        .attr("x", 1310)
+        .attr("y", 735)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#F7DC6F");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("Fear")
+        .attr("x", 1375)
+        .attr("y", 735)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#566573");
+
+    viz.selectAll("key3").data(newData).enter().append("text")
+        .text("None")
+        .attr("x", 1415)
+        .attr("y", 735)
+        .attr("style", "font-size: 18px")
+        .attr("fill", "#ABB2B9");
+
 
 }
 d3.json("data.json").then(gotData)

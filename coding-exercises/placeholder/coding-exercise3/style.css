@@ -3,7 +3,7 @@
     background-color: rgb(196, 231, 243);
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-direction: row; */
     /* why the flex does not work */
 }
 
@@ -13,4 +13,12 @@
     flex-wrap: wrap;
     background-color: black;
     margin: 50px;
+} */
+
+
+/* .key {
+    top: 800px;
+    left: 700px;
+    height: 100px;
+    width: 500px;
 } */
