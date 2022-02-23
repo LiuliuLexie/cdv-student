@@ -7,4 +7,4 @@ In this exercise
 - There also remain a lot of problems during my coding process, I record them in comments and will explore it later
 ...
 
-> See my work [here](https://liuliulexie.github.io/cdv-student/coding-exercises/coding-exercise3/index.html). 
+> See my work [here](https://liuliulexie.github.io/cdv-student/coding-exercises/placeholder/coding-exercise3/index.html). 
