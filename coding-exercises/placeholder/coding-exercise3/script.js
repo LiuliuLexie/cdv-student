@@ -178,6 +178,10 @@ function gotData(newData) {
         .text(dateText)
         .attr("x", datexPos)
         .attr("y", dateyPos)
+        //do calculation inside attribute - create function 
+        //.attr("y", () => {
+        //     return 6 + 7
+        // })
         .attr("fill", "black")
         //.style("text-align", "center");
 
