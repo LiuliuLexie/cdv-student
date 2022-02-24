@@ -1,4 +1,4 @@
-## Coding-Foundation :seedling:
+## Coding-exercise3 :seedling:
 
 In this exercise 
 - I think of a topic and do a four-day self data collection
