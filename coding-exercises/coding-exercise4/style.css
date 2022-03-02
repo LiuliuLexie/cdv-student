@@ -1,0 +1,24 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#viz {
+    border: 1px black solid;
+    margin-left: 20px;
+    background-color: lightblue;
+    /* position: center; how to locate the container in center*/
+}
+
+.heading {
+    margin-left: 40px;
+}
+
+.keys {
+    margin-left: 40px;
+}
+
+.key {
+    margin-left: 80px;
+}
