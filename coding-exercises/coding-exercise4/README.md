@@ -1,4 +1,4 @@
-## Coding-exercise4 :movie_camera:
+## Coding-exercise 4 :movie_camera:
 
 In this exercise 
 - I learnt about improve my data visualization by making use of group (<g>) elements
