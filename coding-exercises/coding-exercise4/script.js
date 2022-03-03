@@ -141,24 +141,29 @@ function gotData(incomingData) {
         .attr("class", "datagroup");
 
     console.log(datagroups);
+    let graphGroups = datagroups.append("g").attr("class", "graphGroup");
+    let labelGroups = datagroups.append("g").attr("class", "labelGroup");
 
     //director name
-    datagroups.append("text")
+    labelGroups.append("text")
         .text(getText)
         .attr("x", -70)
         .attr("y", directorY)
 
-    datagroups.append("text")
+    labelGroups.append("text")
         .text(getText2)
         .attr("x", -70)
         .attr("y", actorY)
 
-    datagroups.append("text")
+    labelGroups.append("text")
+        // .append("text")
         .text(getText3)
-        .attr("x", nameX)
+        .attr("x", 0)
         .attr("y", nameY)
         .style("font-size", 20)
         .style("font-family", "cursive")
+        .attr("text-anchor", "middle")
+        .call(cdvTextWrap(200));
 
     //length circle
     // datagroups.append("circle")
@@ -167,7 +172,7 @@ function gotData(incomingData) {
     //     .attr("r", radius)
     //     .attr("fill", circleColor);
     //circle and rect, which is nicer
-    datagroups.append("rect")
+    graphGroups.append("rect")
         .attr("x", 0)
         .attr("y", 0)
         .attr("rx", 20)
@@ -179,7 +184,7 @@ function gotData(incomingData) {
         .attr("stroke-width", 5)
 
     //place and language circle
-    datagroups.append("circle")
+    graphGroups.append("circle")
         .attr("cx", 0)
         .attr("cy", 0)
         .attr("r", placeRadius)
@@ -187,7 +192,7 @@ function gotData(incomingData) {
         .attr("stroke-width", 5)
         .attr("fill", languageColor);
 
-    datagroups
+    graphGroups
     // .append(function(d, i) {
     //     if (d.typeOfMovie == "drama") {
     //         return document.createElementNS("http://www.w3.org/2000/svg", "rect");
@@ -198,45 +203,42 @@ function gotData(incomingData) {
     // to use one filter to include all shapes
         .filter(function(d, i) { return d.typeOfMovie == "Documentary"; })
         .append("rect")
+        .attr("class", "genreShape")
         .attr("x", -20)
         .attr("y", -20)
         .attr("rx", 10)
         .attr("ry", 10)
         .attr("width", 40)
         .attr("height", 40)
-        .attr("stroke", "black")
-        .attr("stroke-width", 5)
-        .attr("fill", "transparent")
 
-    datagroups
+    graphGroups
         .filter(function(d, i) { return d.typeOfMovie == "Action"; })
         .append("rect")
+        .attr("class", "genreShape")
         .attr("x", -20)
         .attr("y", -20)
         .attr("width", 40)
         .attr("height", 40)
-        .attr("stroke", "black")
-        .attr("stroke-width", 5)
-        .attr("fill", "transparent")
 
-
-    datagroups
+    graphGroups
         .filter(function(d, i) { return d.typeOfMovie == "Romance"; })
         .append("circle")
+        .attr("class", "genreShape")
         .attr("x", -25)
         .attr("y", -25)
         .attr("r", 25)
-        .attr("stroke", "black")
-        .attr("stroke-width", 5)
-        .attr("fill", "transparent")
 
-    datagroups
+
+    graphGroups
         .filter(function(d, i) { return d.typeOfMovie == "Drama"; })
         .append("polygon")
-        .attr("points", "-20 -20 20 20 -20 20 20 -20")
+        .attr("class", "genreShape")
+        .attr("points", "-20 -20 20 20 -20 20 20 -20");
+
+    graphGroups.selectAll(".genreShape")
         .attr("stroke", "black")
         .attr("stroke-width", 5)
-        .attr("fill", "transparent")
+        .attr("fill", "transparent");
 
 
     datagroups.attr("transform", translateGroup);
