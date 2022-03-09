@@ -61,7 +61,7 @@ function gotData(incomingData) {
         .append("g")
             .attr("class", "dayDataGroup")
             .attr("transform", function(d, i){
-                return "translate("+(150+i*210)+", 150)"
+                return "translate("+(150+i*230)+", 300)"
             })
     ;
 
@@ -98,10 +98,21 @@ function gotData(incomingData) {
         .append("circle")
             .attr("cx",0)
             .attr("cy",0)
-            .attr("r",94)
+            .attr("r",95)
             .attr("fill", "transparent")
             .attr("stroke", "blue")
             .attr("stroke-width",6)
+
+    //lip circle
+    dayDataGroups
+        .append("circle")
+            //filter: need to count the number of unconscious vs conscious
+            .attr("cx",0)
+            .attr("cy",0)
+            .attr("r",110)
+            .attr("fill", "transparent")
+            .attr("stroke", "red")
+            .attr("stroke-width",5)
 
     // within each group we bind the hour data to elements (Layer 2)
     // there are multiple groups in dayDataGroups so what we do here 
