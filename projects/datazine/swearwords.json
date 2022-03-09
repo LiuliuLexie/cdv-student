@@ -1,0 +1,461 @@
+[{
+        "date": "0219",
+        "time": "6-7pm",
+
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+
+        "emotionalContent": "surprise/shock"
+    },
+    {
+        "date": "0219",
+        "time": "6-7pm",
+
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+
+        "emotionalContent": "none"
+
+    }, {
+
+        "date": "0219",
+        "time": "6-7pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "anger"
+    }, {
+
+        "date": "0219",
+        "time": "6-7pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "disgust"
+
+    }, {
+
+        "date": "0219",
+        "time": "6-7pm",
+        "where": "wechat",
+        "toWhom": "strangers",
+        "consciousness": "conscious",
+        "emotionalContent": "questioning"
+    }, {
+
+        "date": "0219",
+        "time": "7-8pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0219",
+        "time": "7-8pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "questioning"
+    }, {
+
+        "date": "0219",
+        "time": "7-8pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "disgust"
+    }, {
+
+        "date": "0219",
+        "time": "10-11pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "sadness"
+    }, {
+
+        "date": "0219",
+        "time": "10-11pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0219",
+        "time": "11-12pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0220",
+        "time": "6-7pm",
+
+        "where": "wechat",
+        "toWhom": "roommate",
+        "consciousness": "conscious",
+
+        "emotionalContent": "anger"
+    }, {
+
+        "date": "0220",
+        "time": "0-1am",
+
+        "where": "weibo",
+        "toWhom": "strangers",
+        "consciousness": "conscious",
+
+        "emotionalContent": "sadness"
+    }, {
+
+        "date": "0220",
+        "time": "0-1am",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0220",
+        "time": "10-11pm",
+
+        "where": "in-person",
+        "toWhom": "roommate",
+        "consciousness": "unconscious",
+
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0221",
+        "time": "12-1pm",
+
+        "where": "wechat",
+        "toWhom": "roommate",
+        "consciousness": "conscious",
+
+        "emotionalContent": "questioning"
+    }, {
+
+        "date": "0221",
+        "time": "7-8pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0221",
+        "time": "7-8pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0222",
+        "time": "11-12pm",
+
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0222",
+        "time": "12-1pm",
+
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0222",
+        "time": "7-8pm",
+
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+
+        "emotionalContent": "disgust"
+    }, {
+
+        "date": "0222",
+        "time": "9-10pm",
+
+        "where": "weibo",
+        "toWhom": "strangers",
+        "consciousness": "conscious",
+
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0222",
+        "time": "10-11pm",
+
+        "where": "wechat",
+        "toWhom": "family",
+        "consciousness": "unconscious",
+
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0223",
+        "time": "11-12pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0224",
+        "time": "12-1pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "none"
+    }, {
+
+        "date": "0224",
+        "time": "12-1pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "questioning"
+    }, {
+
+        "date": "0224",
+        "time": "8-9pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "fear"
+    }, {
+
+        "date": "0224",
+        "time": "9-10pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0224",
+        "time": "9-10pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "sadness"
+    }, {
+
+        "date": "0224",
+        "time": "11-12pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0224",
+        "time": "11-12pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0225",
+        "time": "0-1am",
+        "where": "weibo",
+        "toWhom": "strangers",
+        "consciousness": "conscious",
+        "emotionalContent": "anger"
+    }, {
+
+        "date": "0225",
+        "time": "3-4pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0225",
+        "time": "4-5pm",
+        "where": "in-person",
+        "toWhom": "firend",
+        "consciousness": "unconscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0225",
+        "time": "7-8pm",
+        "where": "wechat",
+        "toWhom": "acquaintance",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0225",
+        "time": "8-9pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0225",
+        "time": "11-12pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "none"
+    }, {
+
+        "date": "0225",
+        "time": "11-12pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "none"
+    }, {
+
+        "date": "0226",
+        "time": "2-3am",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0226",
+        "time": "9-10am",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "fear"
+    }, {
+
+        "date": "0226",
+        "time": "9-10am",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0226",
+        "time": "7-8pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0226",
+        "time": "7-8pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "disgust"
+    }, {
+
+        "date": "0226",
+        "time": "8-9pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "disgust"
+    },{
+
+        "date": "0227",
+        "time": "12-1pm",
+        "where": "wechat",
+        "toWhom": "roommate",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    },{
+
+        "date": "0227",
+        "time": "12-1pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "anger"
+    },{
+
+        "date": "0227",
+        "time": "1-2pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "surprise/shock"
+    },{
+
+        "date": "0227",
+        "time": "1-2pm",
+        "where": "wechat",
+        "toWhom": "strangers",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    },{
+
+        "date": "0227",
+        "time": "7-8pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "surprise/shock"
+    },{
+
+        "date": "0227",
+        "time": "8-9pm",
+        "where": "in-person",
+        "toWhom": "friend",
+        "consciousness": "conscious",
+        "emotionalContent": "enjoyment"
+    }, {
+
+        "date": "0227",
+        "time": "9-10pm",
+        "where": "wechat",
+        "toWhom": "friend",
+        "consciousness": "unconscious",
+        "emotionalContent": "surprise/shock"
+    }, {
+
+        "date": "0228",
+        "time": "6-7pm",
+        "where": "wechat",
+        "toWhom": "firiend",
+        "consciousness": "conscious",
+        "emotionalContent": "anger"
+    }, {
+
+        "date": "0228",
+        "time": "8-9pm",
+        "where": "in-person",
+        "toWhom": "acquaintance",
+        "consciousness": "unconscious",
+        "emotionalContent": "surprise/shock"
+    }
+]
