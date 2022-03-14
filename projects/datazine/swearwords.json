@@ -38,11 +38,11 @@
     }, {
 
         "date": "0219",
-        "time": "6-7pm",
+        "time": "2-3pm",
         "where": "wechat",
-        "toWhom": "strangers",
+        "toWhom": "acquaintance",
         "consciousness": "conscious",
-        "emotionalContent": "questioning"
+        "emotionalContent": "disgust"
     }, {
 
         "date": "0219",
@@ -58,7 +58,7 @@
         "where": "wechat",
         "toWhom": "friend",
         "consciousness": "conscious",
-        "emotionalContent": "questioning"
+        "emotionalContent": "enjoyment"
     }, {
 
         "date": "0219",
@@ -113,7 +113,7 @@
         "time": "0-1am",
 
         "where": "weibo",
-        "toWhom": "strangers",
+        "toWhom": "acquaintance",
         "consciousness": "conscious",
 
         "emotionalContent": "sadness"
@@ -145,8 +145,7 @@
         "where": "wechat",
         "toWhom": "roommate",
         "consciousness": "conscious",
-
-        "emotionalContent": "questioning"
+        "emotionalContent": "none"
     }, {
 
         "date": "0221",
@@ -203,7 +202,7 @@
         "time": "9-10pm",
 
         "where": "weibo",
-        "toWhom": "strangers",
+        "toWhom": "acquaintance",
         "consciousness": "conscious",
 
         "emotionalContent": "enjoyment"
@@ -213,7 +212,7 @@
         "time": "10-11pm",
 
         "where": "wechat",
-        "toWhom": "family",
+        "toWhom": "friend",
         "consciousness": "unconscious",
 
         "emotionalContent": "surprise/shock"
@@ -240,7 +239,7 @@
         "where": "in-person",
         "toWhom": "friend",
         "consciousness": "unconscious",
-        "emotionalContent": "questioning"
+        "emotionalContent": "sadness"
     }, {
 
         "date": "0224",
@@ -272,7 +271,7 @@
         "where": "wechat",
         "toWhom": "friend",
         "consciousness": "conscious",
-        "emotionalContent": "enjoyment"
+        "emotionalContent": "surprise/shock"
     }, {
 
         "date": "0224",
@@ -286,7 +285,7 @@
         "date": "0225",
         "time": "0-1am",
         "where": "weibo",
-        "toWhom": "strangers",
+        "toWhom": "acquaintance",
         "consciousness": "conscious",
         "emotionalContent": "anger"
     }, {
@@ -328,7 +327,7 @@
         "where": "in-person",
         "toWhom": "friend",
         "consciousness": "unconscious",
-        "emotionalContent": "none"
+        "emotionalContent": "anger"
     }, {
 
         "date": "0225",
@@ -414,7 +413,7 @@
         "date": "0227",
         "time": "1-2pm",
         "where": "wechat",
-        "toWhom": "strangers",
+        "toWhom": "acquaintance",
         "consciousness": "conscious",
         "emotionalContent": "surprise/shock"
     },{
@@ -441,14 +440,6 @@
         "toWhom": "friend",
         "consciousness": "unconscious",
         "emotionalContent": "surprise/shock"
-    }, {
-
-        "date": "0228",
-        "time": "6-7pm",
-        "where": "wechat",
-        "toWhom": "firiend",
-        "consciousness": "conscious",
-        "emotionalContent": "anger"
     }, {
 
         "date": "0228",

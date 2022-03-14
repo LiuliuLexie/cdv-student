@@ -7,11 +7,119 @@ let viz = d3.select("#container")
         .attr("width", w)
         .attr("height", h);
 
+    viz
+        .append("text")
+        .text("艹草操")//操
+            .attr("x", 570)
+            .attr("y", 160)
+            .style("font-size", 220)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver");
+    ;
 
-//how to do flex position
-// function translateGroup(d, i) {
-//    
-// }
+    viz
+        .append("text")
+        .text("**的**")//**的
+            .attr("x", -30)
+            .attr("y", 150)
+            .style("font-size", 200)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver");
+    ;
+
+    viz
+        .append("text")
+        .text("淦'")//淦
+            .attr("x", -25)
+            .attr("y", 750)
+            .style("font-size", 320)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver");
+    ;
+
+    viz
+        .append("text")
+        .text("씨발")//씨발
+            .attr("x", -30)
+            .attr("y", 480)
+            .style("font-size", 180)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver")
+            // .attr("letter-spacing","2px")
+    ;
+
+    viz
+        .append("text")
+        .text("我日")//我日
+            .attr("x", 825)
+            .attr("y", 762)
+            .style("font-size", 210)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver")
+    ;
+
+    viz
+        .append("text")
+        .text("FUCK")//F**k
+            .attr("x", -20)
+            .attr("y", 300)
+            .style("font-size", 130)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver");
+    ;
+
+    viz
+        .append("text")
+        .text("SH*T")//sh*t
+            .attr("x", 310)
+            .attr("y", 805)
+            .style("font-size", 220)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver");
+    ;
+
+    viz
+        .append("text")
+        .text("***")//sh*t
+            .attr("x", 790)
+            .attr("y", 680)
+            .style("font-size", 300)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver")
+            // .attr("letter-spacing","5px")
+    ;
+
+    viz
+        .append("text")
+        .text("DA!")//sh*t
+            .attr("x", 893)
+            .attr("y", 345)
+            .style("font-size", 170)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver")
+            // .attr("letter-spacing","5px")
+    ;
+
+    viz
+        .append("text")
+        .text("MN")//sh*t
+            .attr("x", 906)
+            .attr("y", 455)
+            .style("font-size", 170)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("fill", "Silver")
+            // .attr("letter-spacing","5px")
+    ;
 
 //manage data to day arrays
 function transformData(dataToTransform) {
@@ -40,13 +148,7 @@ function transformData(dataToTransform) {
     return rearrangedData;
 }
 
-//manage data to hour arrays
-// function transformDataAgain(dataToTransform) {
-//     let hourData = Array.from(d3.group(dataToTransform, d => d.time));
-    // console.log(hourData);
-// 
-//     return dataToTransform;
-// }
+
 
 function gotData(incomingData) {
     console.log(incomingData);
@@ -59,7 +161,7 @@ function gotData(incomingData) {
         .append("g")
             .attr("class", "dayDataGroup")
             .attr("transform", function(d, i){
-                return "translate("+(200+i*230)+", 300)"
+                return "translate(600, 370)"
             })
     ;
 
@@ -89,99 +191,12 @@ function gotData(incomingData) {
     
     let maxWordsPerDay = d3.max(numCurseWordsPerDay);
     let minWordsPerDay = d3.min(numCurseWordsPerDay);
-    let minRadius = 50;
-    let maxRadius = 170;
+    let minRadius = 250;
+    let maxRadius = 250;
     let dayRadiusScale = d3.scaleLinear().domain( [minWordsPerDay, maxWordsPerDay ]).range( [ minRadius, maxRadius ] )
 
 
-
-    // // CREATING SCALE TO CALCULATE HOUR ROTATION
-    // let timeSlots = ["0-1am", "1-2am","2-3am","3-4am","4-5am","5-6am","6-7am","7-8am","8-9am","9-10am","10-11am","11-12am","12-1pm","1-2pm","2-3pm","3-4pm","4-5pm","5-6pm","6-7pm","7-8pm","8-9pm","9-10pm","10-11pm","11-12pm"]
-    // let anglesForTimeSlots = [18, 19,20,21,22,23,24,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
-    // anglesForTimeSlots = anglesForTimeSlots.map(d=>d*15);
-    // let giveTimeGetAngle = d3.scaleOrdinal().domain(timeSlots).range(anglesForTimeSlots);
-
-
-//     test  
-//     let date = "0226";
-//     console.log("date", date)
-//     let numWords = giveDayStringGetNumCurseWords(date);
-//     console.log("numWords", numWords)
-//     let dateRadius = dayRadiusScale(numWords);
-//     console.log("dateRadius", dateRadius)
-// 
-// 
-//     //radius of the mask circle that inside the mouth circle
-//     function maskRadius(d, i) {
-//         let radius;
-//         radius = d3.count(transformedData, d => d.date);
-//         // radius = d3.count(transformedData.Array[1], d => d.date);
-//         // console.log(radius);
-//         return radius * 20 - 5;
-//     }
-
-    //lip circle
-    dayDataGroups
-        .append("circle")
-            //filter: need to count the number of unconscious vs conscious
-            .attr("cx",0)
-            .attr("cy",0)
-            .attr("r",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius+10
-            })
-            .attr("fill", "transparent")
-            .attr("stroke", "red")
-            .attr("stroke-width",5)
-
-    function getTextMMDD(d,i){
-        console.log(d[0]);
-        return d[0];
-    }
-
-    //date
-    dayDataGroups
-        .append("text")
-        .text(getTextMMDD)
-            .attr("x",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return -dateRadius*0.3
-            })
-            .attr("y",-5)
-            .style("font-size",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius*0.3
-            })
-    ;
-
-    dayDataGroups
-        .append("text")
-        .text("2022")
-            .attr("x",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return -dateRadius*0.3
-            })
-            .attr("y",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius*0.2
-            })
-            .style("font-size",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius*0.3
-            })
-    ;
+    
 
     // within each group we bind the hour data to elements (Layer 2)
     // there are multiple groups in dayDataGroups so what we do here 
@@ -201,19 +216,6 @@ function gotData(incomingData) {
                 return "translate(0, 0)"
             })
     ;
-
-
-    // // rect is just to debug/visualize whats happening
-    // hourDataGroups
-    //     .append("rect")
-    //         .attr("x",0)
-    //         // .attr("x",mouthRadius)//need change-relate to the radius-how to count
-    //         .attr("y",0)
-    //         .attr("width", 20)
-    //         .attr("height", 20)
-    //         .attr("fill", "transparent")
-    //         .attr("stroke","black")
-    // ;
 
     hourDataGroups
         .attr("transform", function(d, i){
@@ -275,68 +277,9 @@ function gotData(incomingData) {
         return "rotate("+angle2+")";
         })
 
-        // .attr("transform", function(d,i){
-        //     return "rotate("+giveTimeGetAngle+")"
-        //     })
     ;
 
-    // // these two circles are tests for actual data groups
-    // let rotateTestGroup1 = hourDataGroups.append("g")
-    //     .attr("transform", function(d, i){
-    //         // console.log("need date for radius, where is it inside d?", d)
-    //         // console.log(d[1][0].date)
-    //         let date = d[1][0].date;
-    //         let numWords = giveDayStringGetNumCurseWords(date);
-    //         let dateRadius = dayRadiusScale(numWords);
-    //         // x must depend on radius of that whole day
-    //         let x = dateRadius *0.8;
-    //         return "translate("+x+",0)";
-    //     })
-    // ;
-    // rotateTestGroup1.append("circle")
-    //     .attr("cx", 0)
-    //     .attr("cy", 0)
-    //     .attr("r", 3)
-    //     .attr("fill", "black")
-    // ;
-// 
-//     let rotateTestGroup2= hourDataGroups.append("g")
-//         .attr("transform", function(d, i){
-//             // console.log("need date for radius, where is it inside d?", d)
-//             // console.log(d[1][0].date)
-//             let date = d[1][0].date;
-//             let numWords = giveDayStringGetNumCurseWords(date);
-//             let dateRadius = dayRadiusScale(numWords);
-//             // x must depend on radius of that whole day
-//             let x = dateRadius *0.8;
-//             return "rotate(15) translate("+x+",0)";
-//         })
-//     ;
-// 
-//     rotateTestGroup2.append("circle")
-//         .attr("cx", 0)
-//         .attr("cy", 0)
-//         .attr("r", 3)
-//         .attr("fill", "red")
-//     ;
-
-
-
-//     let actualDataGroups = hourDataGroups.append("g")
-//         
-//         .attr("transform", function(d, i){
-//             // console.log("need date for radius, where is it inside d?", d)
-//             // console.log(d[1][0].toWhom)
-//             let date = d[1][0].date;
-//             let numWords = giveDayStringGetNumCurseWords(date);
-//             let dateRadius = dayRadiusScale(numWords);
-//             // x must depend on radius of that whole day
-//             let x = dateRadius *0.8;
-// 
-//             return "translate("+x+",0)";
-//         })
-//     ;
-
+  
     function GetSingleDatapoints(d, i){
         return d[1] 
     }
@@ -351,13 +294,88 @@ function gotData(incomingData) {
                 let numWords = giveDayStringGetNumCurseWords(date);
                 let dateRadius = dayRadiusScale(numWords);
                 // x must depend on radius of that whole day
-                let x = dateRadius *0.8;
+                let x = dateRadius *0.85;
 
                 return "rotate("+i*5+") translate("+x+",0)"
             })
             .attr("fill", actualDataPointsColor)
     ;
-  
+    // let singleDataGroups = actualDataGroups.selectAll(".singleDataGroup").data(GetSingleDatapoints).enter()
+    //     .append("g")
+    //         .attr("class", "singleDataGroup")
+    //         .attr("transform", function(d, i){
+    //             console.log(i);
+    //             return "rotate("+i*5+")"
+    //         })
+    //         .attr("fill", actualDataPointsColor)
+    // ;
+
+//background circle
+dayDataGroups
+        .append("circle")
+            .attr("cx",0)
+            .attr("cy",0)
+            // .attr("r",100)
+            .attr("r",function(d, i){
+                let date = d[0];
+                let numWords = giveDayStringGetNumCurseWords(date);
+                let dateRadius = dayRadiusScale(numWords);
+                return dateRadius+20
+            })
+            .attr("fill", "transparent")
+            .attr("stroke", "white")
+            .attr("stroke-width",50)
+    ;
+
+//lip circle
+    dayDataGroups
+        .append("circle")
+            //filter: need to count the number of unconscious vs conscious
+            .attr("cx",0)
+            .attr("cy",0)
+            .attr("r",function(d, i){
+                let date = d[0];
+                let numWords = giveDayStringGetNumCurseWords(date);
+                let dateRadius = dayRadiusScale(numWords);
+                return dateRadius+25
+            })
+            .attr("fill", "transparent")
+            .attr("stroke", "red")
+            .attr("stroke-width",13)
+;
+
+ //main mouthcircle
+    dayDataGroups
+        .append("circle")
+            .attr("cx",0)
+            .attr("cy",0)
+            // .attr("r",100)
+            .attr("r",function(d, i){
+                let date = d[0];
+                let numWords = giveDayStringGetNumCurseWords(date);
+                let dateRadius = dayRadiusScale(numWords);
+                return dateRadius
+            })
+            .attr("fill", "transparent")
+            .attr("stroke", "black")
+            .attr("stroke-width",15)
+    ;
+
+    //mouth mask circle
+    dayDataGroups
+        .append("circle")
+            .attr("cx",0)
+            .attr("cy",0)
+            .attr("r",function(d, i){
+                let date = d[0];
+                let numWords = giveDayStringGetNumCurseWords(date);
+                let dateRadius = dayRadiusScale(numWords);
+                return dateRadius-5
+            })
+            .attr("fill", "transparent")
+            .attr("stroke", "black")
+            .attr("stroke-width",5)
+    ;
 
     function actualDataPointsColor(d,i){
         let color;
@@ -381,22 +399,23 @@ function gotData(incomingData) {
         return color;
     }
 
+
     singleDataGroups
         .filter(function(d, i) { return d.toWhom == "friend"; })
         .append("rect")//rectangle
             .attr("x",-10)
             .attr("y",-5)
-            .attr("width",30)
-            .attr("height",7)
+            .attr("width",40)
+            .attr("height",15)
 
     ;
 
     singleDataGroups
         .filter(function(d, i) { return d.toWhom == "roommate"; })
         .append("circle")//circle
-            .attr("cx", 5)
-            .attr("cy", 0)
-            .attr("r", 10)
+            .attr("cx", 10)
+            .attr("cy", 8)
+            .attr("r", 13)
     ;
 
     singleDataGroups
@@ -404,31 +423,21 @@ function gotData(incomingData) {
         .append("rect")//round-corner rectangle
             .attr("x",-5)
             .attr("y",-5)
-            .attr("rx",4)
-            .attr("ry",4)
-            .attr("width",25)
-            .attr("height",10)
+            .attr("rx",6)
+            .attr("ry",6)
+            .attr("width",30)
+            .attr("height",15)
     ;
+
+
 
     singleDataGroups
         .filter(function(d, i) { return d.where == "wechat"; })
         .append("line")//wechaat
-            .attr("x1",-5)
+            .attr("x1",3)
             .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
-            .attr("stroke", "black")
-            .attr("stroke-width",4)
-    ;
-
-//need change
-    singleDataGroups
-        .filter(function(d, i) { return d.where == "weibo"; })
-        .append("line")//wechaat
-            .attr("x1",-5)
-            .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
+            .attr("x2",3)
+            .attr("y2",10)
             .attr("stroke", "black")
             .attr("stroke-width",4)
     ;
@@ -436,50 +445,50 @@ function gotData(incomingData) {
     singleDataGroups
         .filter(function(d, i) { return d.where == "weibo"; })
         .append("line")//wechaat
-            .attr("x1",-5)
+            .attr("x1",3)
             .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
+            .attr("x2",3)
+            .attr("y2",10)
             .attr("stroke", "black")
             .attr("stroke-width",4)
     ;
 
-
- //main mouthcircle
-    dayDataGroups
-        .append("circle")
-            .attr("cx",0)
-            .attr("cy",0)
-            // .attr("r",100)
-            .attr("r",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius
-            })
-            .attr("fill", "transparent")
+    singleDataGroups
+        .filter(function(d, i) { return d.where == "weibo"; })
+        .append("line")//wechaat
+            .attr("x1",10)
+            .attr("y1",-5)
+            .attr("x2",10)
+            .attr("y2",10)
             .attr("stroke", "black")
-            .attr("stroke-width",7)
+            .attr("stroke-width",4)
     ;
 
-    //mouth mask circle
     dayDataGroups
-        .append("circle")
-            .attr("cx",0)
-            .attr("cy",0)
-            .attr("r",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius-5
-            })
-            .attr("fill", "transparent")
-            .attr("stroke", "black")
-            .attr("stroke-width",1)
+        .append("text")
+            .text("SWEAR")
+            .attr("x", -130)
+            .attr("y", -25)
+            .style("font-size", 90)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+     
+    ;
+
+    dayDataGroups
+        .append("text")
+            .text("WORDS")
+            .attr("x", 0)
+            .attr("y", 50)
+            .style("font-size", 90)
+            .style("font-family", "Times New Roman")
+            .style("font-weight", "bold")
+            .attr("text-anchor", "middle")
+            .call(cdvTextWrap(200))
     ;
 
     // datagroups.attr("transform", translateGroup);
 }
 
 
-d3.json("swearwords.json").then(gotData);
+d3.json("swearwordscover.json").then(gotData);
