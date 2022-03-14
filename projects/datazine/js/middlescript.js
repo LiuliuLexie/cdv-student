@@ -54,13 +54,24 @@ function gotData(incomingData) {
     console.log("transformedData", transformedData)
         // timeSlotData = transformDataAgain(transformedData);
 
+function translateGroup(d, i) {
+    //remember that i starts from 0
+    let x, y;
+    if (i < 7) {
+        x = 250 + 320 * i;
+        y = 200;
+    } else if (i > 6) {
+        x = 250 + 320 * (i - 7);
+        y = 530;
+    }
+    return "translate(" + x + ", " + y + ")";
+}
+
     // binding the first layer data to big groups, one for each day
     let dayDataGroups = viz.selectAll(".dayDataGroup").data(transformedData).enter()
         .append("g")
             .attr("class", "dayDataGroup")
-            .attr("transform", function(d, i){
-                return "translate("+(200+i*230)+", 300)"
-            })
+            .attr("transform", translateGroup)
     ;
 
     // CREATING SCALE TO CALCULATE RADIUS
@@ -89,8 +100,8 @@ function gotData(incomingData) {
     
     let maxWordsPerDay = d3.max(numCurseWordsPerDay);
     let minWordsPerDay = d3.min(numCurseWordsPerDay);
-    let minRadius = 50;
-    let maxRadius = 170;
+    let minRadius = 60;
+    let maxRadius = 150;
     let dayRadiusScale = d3.scaleLinear().domain( [minWordsPerDay, maxWordsPerDay ]).range( [ minRadius, maxRadius ] )
 
 
@@ -130,11 +141,11 @@ function gotData(incomingData) {
                 let date = d[0];
                 let numWords = giveDayStringGetNumCurseWords(date);
                 let dateRadius = dayRadiusScale(numWords);
-                return dateRadius+10
+                return dateRadius+18
             })
             .attr("fill", "transparent")
             .attr("stroke", "red")
-            .attr("stroke-width",5)
+            .attr("stroke-width",7)
 
     function getTextMMDD(d,i){
         console.log(d[0]);
@@ -201,19 +212,6 @@ function gotData(incomingData) {
                 return "translate(0, 0)"
             })
     ;
-
-
-    // // rect is just to debug/visualize whats happening
-    // hourDataGroups
-    //     .append("rect")
-    //         .attr("x",0)
-    //         // .attr("x",mouthRadius)//need change-relate to the radius-how to count
-    //         .attr("y",0)
-    //         .attr("width", 20)
-    //         .attr("height", 20)
-    //         .attr("fill", "transparent")
-    //         .attr("stroke","black")
-    // ;
 
     hourDataGroups
         .attr("transform", function(d, i){
@@ -351,7 +349,7 @@ function gotData(incomingData) {
                 let numWords = giveDayStringGetNumCurseWords(date);
                 let dateRadius = dayRadiusScale(numWords);
                 // x must depend on radius of that whole day
-                let x = dateRadius *0.8;
+                let x = dateRadius *0.85;
 
                 return "rotate("+i*5+") translate("+x+",0)"
             })
@@ -387,7 +385,7 @@ function gotData(incomingData) {
             .attr("x",-10)
             .attr("y",-5)
             .attr("width",30)
-            .attr("height",7)
+            .attr("height",8)
 
     ;
 
@@ -404,19 +402,19 @@ function gotData(incomingData) {
         .append("rect")//round-corner rectangle
             .attr("x",-5)
             .attr("y",-5)
-            .attr("rx",4)
-            .attr("ry",4)
-            .attr("width",25)
-            .attr("height",10)
+            .attr("rx",5)
+            .attr("ry",5)
+            .attr("width",22)
+            .attr("height",8)
     ;
 
     singleDataGroups
         .filter(function(d, i) { return d.where == "wechat"; })
         .append("line")//wechaat
-            .attr("x1",-5)
+            .attr("x1",-2)
             .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
+            .attr("x2",-2)
+            .attr("y2",3)
             .attr("stroke", "black")
             .attr("stroke-width",4)
     ;
@@ -425,10 +423,10 @@ function gotData(incomingData) {
     singleDataGroups
         .filter(function(d, i) { return d.where == "weibo"; })
         .append("line")//wechaat
-            .attr("x1",-5)
+            .attr("x1",-2)
             .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
+            .attr("x2",-2)
+            .attr("y2",3)
             .attr("stroke", "black")
             .attr("stroke-width",4)
     ;
@@ -436,10 +434,10 @@ function gotData(incomingData) {
     singleDataGroups
         .filter(function(d, i) { return d.where == "weibo"; })
         .append("line")//wechaat
-            .attr("x1",-5)
+            .attr("x1",5)
             .attr("y1",-5)
-            .attr("x2",-5)
-            .attr("y2",2)
+            .attr("x2",5)
+            .attr("y2",3)
             .attr("stroke", "black")
             .attr("stroke-width",4)
     ;
@@ -455,28 +453,28 @@ function gotData(incomingData) {
                 let date = d[0];
                 let numWords = giveDayStringGetNumCurseWords(date);
                 let dateRadius = dayRadiusScale(numWords);
-                return dateRadius
+                return dateRadius+3
             })
             .attr("fill", "transparent")
             .attr("stroke", "black")
-            .attr("stroke-width",7)
+            .attr("stroke-width",9)
     ;
 
-    //mouth mask circle
-    dayDataGroups
-        .append("circle")
-            .attr("cx",0)
-            .attr("cy",0)
-            .attr("r",function(d, i){
-                let date = d[0];
-                let numWords = giveDayStringGetNumCurseWords(date);
-                let dateRadius = dayRadiusScale(numWords);
-                return dateRadius-5
-            })
-            .attr("fill", "transparent")
-            .attr("stroke", "black")
-            .attr("stroke-width",1)
-    ;
+    // //mouth mask circle
+    // dayDataGroups
+    //     .append("circle")
+    //         .attr("cx",0)
+    //         .attr("cy",0)
+    //         .attr("r",function(d, i){
+    //             let date = d[0];
+    //             let numWords = giveDayStringGetNumCurseWords(date);
+    //             let dateRadius = dayRadiusScale(numWords);
+    //             return dateRadius-2
+    //         })
+    //         .attr("fill", "transparent")
+    //         .attr("stroke", "black")
+    //         .attr("stroke-width",5)
+    // ;
 
     // datagroups.attr("transform", translateGroup);
 }
