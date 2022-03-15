@@ -2,17 +2,17 @@
 
 Here is the screenshots of every page of my data zine.
 
-#cover
+### cover
 
-![cover.png](Data%20Zine%20%208cc04/cover.png)
+![cover.png](cover.png)
 
-#middle page
+### middle page
 
-![middle page.png](Data%20Zine%20%208cc04/middle_page.png)
+![middle page.png](middle_page.png)
 
-#back
+### back
 
-![back.png](Data%20Zine%20%208cc04/back.png)
+![back.png](back.png)
 
 # What and Why?
 - I chose to collect the data of swear words I say in two weeks. I initial reason of choosing this is my personal habbit. I'm a person who was not prohibited from swearing by my family members which is rare in China. Chinese traditional culture shows high respect to manners and politeness, leading to stereotypes towards swear words. Most people view them negative words and think they only express bad emotion such as anger, disgust, etc. However, today, swear words are used to express more moods. They tend to become popular in literature works and daliy communication. Some are even inclueded in dictionaries. I find this tendency interesting, thus, decide to do this data collection myself.
