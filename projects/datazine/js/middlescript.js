@@ -457,7 +457,7 @@ function translateGroup(d, i) {
             })
             .attr("fill", "transparent")
             .attr("stroke", "black")
-            .attr("stroke-width",9)
+            .attr("stroke-width",10)
     ;
 
     // //mouth mask circle
