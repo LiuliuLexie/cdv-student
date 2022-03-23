@@ -229,7 +229,7 @@ function visualizeData(){
 
     //UPDATING
     let datagroups = vizGroup.selectAll(".datagroup").data(dataToShow);
-    datagroups.attr("transform", getGroupLocation)
+    datagroups.transition().duration(1000).attr("transform", getGroupLocation)
     
     //ENTERING
     let enteringElements=datagroups.enter()
@@ -257,12 +257,23 @@ function visualizeData(){
       let y = yScale(d.y);
       return "translate("+x+", "+y+")"
     }
+    function getIncomingGroupLocation(d, i){
+      let x = xScale(d.x);
+      let y = -30;
+      return "translate("+x+", "+y+")"
+    }
+    function getExitingGroupLocation(d, i){
+      let x = xScale(d.x);
+      let y = h+30;
+      return "translate("+x+", "+y+")"
+    }
 
-    enteringElements.attr("transform", getGroupLocation);
+  //ENTERING
+    enteringElements.attr("transform", getIncomingGroupLocation).transition().delay(1000).attr("transform", getGroupLocation);
 
   //EXITING
     let exitingElements=datagroups.exit();
-    exitingElements.remove();
+    exitingElements.transition().attr("transform", getExitingGroupLocation).remove();
 
   }
 
