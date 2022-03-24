@@ -229,7 +229,7 @@ function visualizeData(){
 
     //UPDATING
     let datagroups = vizGroup.selectAll(".datagroup").data(dataToShow);
-    datagroups.transition().duration(1000).attr("transform", getGroupLocation)
+    datagroups.transition().ease(d3.easeLinear).duration(1000).attr("transform", getGroupLocation)
     
     //ENTERING
     let enteringElements=datagroups.enter()
