@@ -1,4 +1,4 @@
-## Coding-exercise 6 ::exploding_head:
+## Coding-exercise 6 :exploding_head:
 
 In this exercise 
 - I practiced with the Entering, Updating, Exiting elements
