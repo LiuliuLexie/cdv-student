@@ -58,9 +58,70 @@ let lineMaker=d3.line()
   })
 ;
 
+
+
 let graphGroup = viz.append("g").attr("class", "graphGroup");
 
-graphGroup.selectAll(".line").data(incomingData).enter()
+// console.log(incomingData[0])
+// console.log([incomingData[0]])
+// console.log(incomingData[1])
+// console.log([incomingData[1]])
+
+
+//THIS WORKS
+//
+// function usa(d,i){
+//   graphGroup.selectAll(".line").data([incomingData[0]]).enter()
+//     .append('path')
+//       .attr('d',lineMaker)
+//       .attr('fill','none')
+//       .attr("class", "line")
+//       .attr('stroke-width',5)
+//       .attr('stroke','blue');
+// 
+//   graphGroup.selectAll(".line").data([incomingData[0]]).transition()
+//     .duration(500)
+//       .attr("d", lineMaker)
+//       .attr("fill", "none")
+//       .attr("stroke", "blue")
+//       .attr("stroke-width", 5)
+// 
+// ;
+// }
+// 
+// function china(d,i){
+//   graphGroup.selectAll(".line").data([incomingData[1]]).enter()
+//     .append('path')
+//       .attr('d',lineMaker)
+//       .attr('fill','none')
+//       .attr("class", "line")
+//       .attr('stroke-width',5)
+//       .attr('stroke','red');
+// 
+// 
+//   graphGroup.selectAll(".line").data([incomingData[1]]).transition()
+//     .duration(500)
+//       .attr("d", lineMaker)
+//       .attr("fill", "none")
+//       .attr("stroke", "red")
+//       .attr("stroke-width", 5)
+// ;
+// }
+// 
+// 
+// document.getElementById("usa").addEventListener("click", usa);
+// document.getElementById("china").addEventListener("click", china);
+// 
+// 
+// }
+
+
+
+//THE SUPER FUNCTION ALSO WORKS, YEAH
+
+function visualizeData(d,i){
+
+graphGroup.selectAll(".line").data([incomingData[dataIndex]]).enter()
   .append("path")
     .attr("class","line")
     .attr("d",lineMaker)
@@ -73,7 +134,30 @@ graphGroup.selectAll(".line").data(incomingData).enter()
         return "blue"
       }
     })
-;       
+;      
+
+graphGroup.selectAll(".line").data([incomingData[dataIndex]]).transition()
+  .delay(200)
+  .duration(1000)
+    .attr("d", lineMaker)
+    .attr("fill", "none")
+    .attr("stroke",function(d,i){
+      if(d[0].country=="United States"){
+        return "blue"
+      }else{
+        return "red"
+      }
+    })
+}
+
+  document.getElementById("usa").addEventListener("click",function(){
+    dataIndex=0;
+    visualizeData();
+  });
+  document.getElementById("china").addEventListener("click",function(){
+    dataIndex=1;
+    visualizeData();
+  });
 
 }
 
