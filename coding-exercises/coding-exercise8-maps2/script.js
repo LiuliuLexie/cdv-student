@@ -1,6 +1,6 @@
 let w = 1200;
 let h = 800;
-let padding = 30
+let padding = 60
 
 // SVG
 let viz = d3.select("#container").append("svg")
@@ -29,7 +29,7 @@ d3.json("mainland.geojson").then(function (geoData) {
     let colorScale = d3.scaleLinear().domain([minPop, maxPop]).range(['white', 'green']);
 
 
-    let projection=d3.geoEquirectangular() //returns a projection
+    let projection=d3.geoStereographic() //returns a projection
       .translate([w/2,h/2])
       // .scale(300)
       // .center([103.8,34.1])
