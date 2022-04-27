@@ -1,0 +1,33 @@
+body{
+  text-align: center;
+  margin-top:30px;
+}
+
+
+/* .datagroup circle:hover{
+  opacity:1;
+} this only change the circle when mouse on the circle*/
+
+
+/* .datagroup text{
+  visibility:hidden;
+}
+
+.datagroup circle{
+  transition: transform 100ms;
+}
+
+.datagroup:hover circle{
+  opacity:1;
+  fill:rgb(119, 216, 54);
+  transform: scale(1.5);
+}
+
+.datagroup:hover text{
+  visibility:visible;
+}
+
+.datagroup:hover{
+  cursor:default;
+} */
+

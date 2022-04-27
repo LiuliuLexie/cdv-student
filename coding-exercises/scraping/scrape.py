@@ -1,3 +1,21 @@
+# url ....
+# request url
+# beautiful soup...
+# in for loop, get each
+#    - movie name
+#    - director
+#    - link to movie page
+#          link ....
+#          request link
+#          beautiful soup...
+#          in for loop, get each
+#              - jump scare details
+#              - ...
+#    put all collected data into one data point
+
+
+
+
 import requests
 import json
 from pprint import pprint
@@ -16,7 +34,6 @@ url="https://wheresthejump.com/full-movie-list/"
 
 
 
-
 result=requests.get(url)
 # print(result)
 # request code 200: works
@@ -28,16 +45,11 @@ plain_result=result.text
 
 
 
-
-
 # 2. turn webpage into structured html object
 #       with the library called Beautiful Soup
 
 soup=BeautifulSoup(result.text,'html.parser')
 # print(soup)
-
-
-
 
 
 
@@ -58,13 +70,13 @@ for row in rows:
     # link=row.select("a")
     link_src=cells[0].select_one("a")["href"]
         
-        # url_further=link_src
-        # result_further = request.get(url_further)
-        # plain_result_further=result_further.text
-        # soup=BeautifulSoup(result_further.text,'html.parser')
-        # video_info=soup.select_one(".video-info-grid-container")
-
-
+        # download further webs??
+        url_further=link_src
+        result_further = request.get(url_further)
+        plain_result_further=result_further.text
+        soup=BeautifulSoup(result_further.text,'html.parser')
+        print(soup)
+        video_info=soup.select_one(".video-info-grid-container")
 
     data.append({
         "title": cells[0].text,
@@ -78,8 +90,6 @@ for row in rows:
     # print("-"*50)
 
 pprint(data)
-
-
 
 
 

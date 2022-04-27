@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+#ruletitle{
+    font-size: 55px ;
+    font-family: Papyrus;
+}
+
+#ruletext{
+    font-size: 18px;
+    font-family: papyrus;
+}
+
+#checkbox{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}

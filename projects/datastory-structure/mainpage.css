@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+
+#video{
+    text-align: center;
+}
+
+#webtitle{
+    position: absolute;
+    top: 200px;
+    left:200px;
+    right:auto;
+    /* text-align: center; */
+    width: 1000px;
+    height: 600px;
+}
+
+#blood{
+    position: fixed;
+    top: 0px;
+    left:0px;
+    right:0px;
+    /* text-align: center; */
+    width: 100vw;
+    height: 100vh;
+}
+
+#introtext{
+    text-align: center;
+    color:whitesmoke;
+}
+
+#visualization{
+    text-align: center;
+}
