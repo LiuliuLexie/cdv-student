@@ -9,6 +9,8 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="mainpage.css">
 
+    <!-- enter view library -->
+    <script src="https://unpkg.com/enter-view"></script>
     <!-- library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
@@ -16,7 +18,7 @@
 <body>
     <div>
         <audio autoplay>
-        <source src="Charlie Clouser - Main Titles.mp3" type="audio/mpeg">
+        <!-- <source src="Charlie Clouser - Main Titles.mp3" type="audio/mpeg"> -->
         </audio>
     </div>
 
@@ -28,8 +30,8 @@
 
         <p style="color:rgb(71, 71, 71)">"Horror Jump Scares That Will Scare You to Death." YouTube, uploaded by Amazon Prime Video UK, 15 Oct. 2021, youtu.be/BCKoyByMdRg</p>
 
-        <img id="webtitle" src="webtitle.png" alt="webtitle">
-        <img id="blood" src="blood.png" alt="blood">
+        <!-- <img id="webtitle" src="webtitle.png" alt="webtitle"> -->
+        <!-- <img id="blood" src="blood.png" alt="blood"> -->
     </div>
 
     <br>
@@ -47,9 +49,36 @@
     <br>
     <br>
 
-    <div id="visualization">
+    <!-- visualization graphs (for structure) -->
+    <!-- <div id="visualization">
         <img id="mainpage" src="mainpage.jpg" width="600px">
+    </div> -->
+
+    <!-- visulization -->
+    <div id="wrapper1">
+      <!-- <div class="fullHeight">
+        <p>TITLE</p>
+      </div> -->
+      <!-- <div class="halfHeight">
+        <p>some information</p>
+      </div> -->
+      <div class="fullHeight" id="vizContainer1">
+
+      </div>
+      <div class="halfHeight textOne">
+        <p>some information</p>
+      </div>
+      <div class="halfHeight textTwo">
+        <p>some other information</p>
+      </div>
+      <div class="halfHeight">
+        <p>some other information</p>
+      </div>
+
     </div>
+
+    <!-- main script -->
+    <script type="text/javascript" src="mainpage.js"></script>
     
 </body>
 </html>

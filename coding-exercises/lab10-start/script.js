@@ -69,7 +69,7 @@ d3.json("monarchs.json").then(function(incomingData){
         textElement
           .attr("x",xScale(d.date))
           .attr("y",yScale(yScale(d.type) + yScale.bandwidth()/2)
-          .attr("opacity",1)
+          .attr("opacity",1))
         ;
 
         //do something with the hovered element

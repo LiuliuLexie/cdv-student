@@ -1,3 +1,5 @@
+# coding logic
+
 # url ....
 # request url
 # beautiful soup...
@@ -63,37 +65,57 @@ rows=table_of_interest.select("tr")
 # print(rows[0])
 # find more info on the url in tr
 data=[]
-for row in rows:
+for row in rows[:3]:
     # print(row)
     cells=row.select("td")
     # print(cells)
     # link=row.select("a")
     link_src=cells[0].select_one("a")["href"]
-        
-        # download further webs??
-        url_further=link_src
-        result_further = request.get(url_further)
-        plain_result_further=result_further.text
-        soup=BeautifulSoup(result_further.text,'html.parser')
-        print(soup)
-        video_info=soup.select_one(".video-info-grid-container")
 
-    data.append({
-        "title": cells[0].text,
-        "link":link_src,
-        "director": cells[1].text,
-        "year": cells[2].text,
-        "jumpCount": cells[3].text,
-        "jumpScareRating":cells[4].text,
-        "netflix":cells[5].text
-    })
+    # get detailed info
+    result_further = requests.get(link_src)
+    soup=BeautifulSoup(result_further.text,'html.parser')
+    # print(soup)
+    video_info=soup.select_one(".video-info-grid-container")
+
+    # get the detailed info: runtime & tags
+    p_tags = video_info.select("p")
+    for p in p_tags:
+        if p.text.startswith("Runtime"):
+            runtime = p.text.split("Runtime: ")[1].split(" minutes")[0]
+            # print("runtime:", runtime)
+            # print("-"*25)
+        elif p.text.startswith("Tags"):
+            tags = p.text.split("Tags: ")[1].split(", ")
+            # print("tags:", tags)
+            # print("-"*25)
+
+    # get the detailed info: jump scare times
+    jumpScareTime_info=soup.select_one(".entry_content")
+    lines=jumpScareTime_info.select("p")
+    for line in lines:
+        if line.text.startswith("00:"):
+            jumpScareTime=p.text
+            print(jumpScareTime)
+            print("-"*25)
+
+    # data.append({
+    #     "title": cells[0].text,
+    #     "link":link_src,
+    #     "director": cells[1].text,
+    #     "year": cells[2].text,
+    #     "jumpCount": cells[3].text,
+    #     "jumpScareRating":cells[4].text,
+    #     "netflix":cells[5].text,
+    #     "tags": tags,
+    #     "runtime": runtime
+    # })
     # print("-"*50)
 
 pprint(data)
 
 
-
-
-# 4. save the dictionairy as a data.json file DONE
-with open("data.json","w") as outfile:
-    json.dump(data,outfile,indent=4)
+# 
+# # 4. save the dictionairy as a data.json file DONE
+# with open("data.json","w") as outfile:
+#     json.dump(data,outfile,indent=4)

@@ -1,41 +1,4 @@
 body{
-    background-color: black;
-}
-
-#video{
-    text-align: center;
-}
-
-#webtitle{
-    position: absolute;
-    top: 200px;
-    left:200px;
-    right:auto;
-    /* text-align: center; */
-    width: 1000px;
-    height: 600px;
-}
-
-#blood{
-    position: fixed;
-    top: 0px;
-    left:0px;
-    right:0px;
-    /* text-align: center; */
-    width: 100vw;
-    height: 100vh;
-}
-
-#introtext{
-    text-align: center;
-    color:whitesmoke;
-}
-
-/* #visualization{
-    text-align: center;
-} */
-
-body{
   margin:0;
 }
 
@@ -50,8 +13,7 @@ body{
 }
 
 .halfHeight{
-  background-color: goldenrod;
-opacity: 0.5;
+  /* background-color: orange; */
   width:100%;
   height:50vh;
   outline:1px solid black;
@@ -65,16 +27,16 @@ opacity: 0.5;
   margin-left: 10px;
 }
 
-#vizContainer1{
+#vizContainer{
   position:sticky; 
   top:0px;
   z-index: -1; /*do with the order, 1 layer back*/
 }
 
-/* #wrapper2 p{
+#wrapper2 p{
   background-color: rgb(rgb(240, 82, 82), green, blue);
 }
 
 #wrapper2 .fullHeight{
   background-color: rgb(rgb(237, 240, 82), green, blue);
-} */
+}
