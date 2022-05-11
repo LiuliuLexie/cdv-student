@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tagGraph</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="tagGraph.css">
+
+    <!-- enter view library -->
+    <script src="https://unpkg.com/enter-view"></script>
+    <!-- library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="textcontainer">
+<br>
+<br>
+        <h2>What Are The Most Popular Tags In Jump Scare Movies?</h2>
+        <h2>🤔</h2>
+<br>
+        <p>Some elements are very popular and representative in jump scare movies.<br>Here are the appearance numbers of different tags in all 500 jump scare movies.</p>
+<br>
+        <p>Which appears most frequent?</p>
+            <form action="/action_page.php">
+            <label for="popularElement">Choose tag:</label>
+            <select name="ele" id="ele">
+                <option >Foreign</option>
+                <option >Found Footage</option>
+                <option >Survival</option>
+                <option >Zombie</option>
+                <option >Extraterrestrial Life</option>
+                <option >Mystery</option>
+                <option >Post-Apocalyptic</option>
+                <option >Sci-Fi</option>
+                <option >Underground</option>
+                <option >Comedy</option>
+                <option >Low Budget</option>
+                <option >Book Adaptation</option>
+                <option >Historical</option>
+                <option >Crime</option>
+                <option >Possession</option>
+                <option >Vampire</option>
+                <option >Gory</option>
+                <option >Shark</option>
+                <option >Action</option>
+                <option >Haunted House / Building</option>
+                <option >Fantasy</option>
+                <option >Religion & The Occult</option>
+                <option >Revenge</option>
+                <option >Romantic</option>
+                <option >Black & White</option>
+                <option >Loner / Misfit</option>
+                <option >Slasher</option>
+                <option >Monsters & Mutants</option>
+                <option >Forest / Woods Setting</option>
+                <option >Body Horror</option>
+                <option >Home Invasion</option>
+                <option >Werewolf</option>
+                <option >Christmas</option>
+                <option >Creepy Children</option>
+            </select>
+            <br><br>
+
+            </form>
+<br>
+<br>
+        <p>Any elements you are scare of ?  😈</p>
+        <form action="/action_page.php">
+        <label for="element1">Element:</label>
+        <input type="text" id="element1"><br><br>
+        <label for="element2">Element:</label>
+        <input type="text" id="element2"><br><br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+
+      <!-- <div class="button" id="buttonD">
+        <p>Sort</p>
+      </div> -->
+
+    <div id="visualization">
+
+    </div>
+
+
+
+    <!-- main script -->
+    <script type="text/javascript" src="tagGraph.js"></script>
+</body>
+</html>

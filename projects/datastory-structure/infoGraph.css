@@ -1,0 +1,45 @@
+#visualization{
+    margin-top: 50px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor text{
+  stroke: rgb(187, 187, 187);
+}  
+
+#webtitle3{
+    position: absolute;
+    top: 20px;
+    left:160px;
+    right:auto;
+    /* text-align: center; */
+    width: 420px;
+    height: 420px;
+z-index:999;
+}
+
+.textcontainer { 
+  position: absolute;
+  text-align: center;
+  margin-top: 350px;
+  margin-left: 180px;
+  /* margin-bottom: 0px; */
+  height: 0px;
+  color: aliceblue;
+  width: 180px;
+  /* position: relative; */
+  /* border: 3px solid green;  */
+z-index:999;
+}

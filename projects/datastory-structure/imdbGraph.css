@@ -1,0 +1,44 @@
+#visualization{
+    text-align: center;
+    margin-left:550px;
+}
+
+body{
+    background-color: black;
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor text{
+  stroke: rgb(187, 187, 187);
+}  
+
+.textcontainer { 
+  /* position: absolute; */
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 0px;
+  /* margin-bottom: 0px; */
+  height: 0px;
+  color: aliceblue;
+  width: 1400px;
+  /* position: relative; */
+  /* border: 3px solid green;  */
+z-index:999;
+}
+
+
+.datapoints:hover circle{
+  opacity: 1;
+  fill: rgb(255, 0, 0);
+  transform: scale(1.2);
+}
+.datapoints:hover text{
+  visibility: visible;
+}

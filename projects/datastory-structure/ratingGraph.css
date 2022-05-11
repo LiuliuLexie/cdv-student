@@ -1,0 +1,45 @@
+#visualization{
+    text-align: center;
+    margin-top: 180px;
+}
+
+body{
+    background-color: black;
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor path{
+  stroke: rgb(187, 187, 187);
+}
+
+.axisColor text{
+  stroke: rgb(187, 187, 187);
+}  
+
+.textcontainer { 
+  /* position: absolute; */
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 0px;
+  /* margin-bottom: 0px; */
+  height: 0px;
+  color: aliceblue;
+  width: 1400px;
+  /* position: relative; */
+  /* border: 3px solid green;  */
+z-index:999;
+}
+
+#blood{
+    position: fixed;
+    top: 0px;
+    left:0px;
+    right:0px;
+    /* text-align: center; */
+    width: 100vw;
+    height: 100vh;
+    z-index:0;
+}
