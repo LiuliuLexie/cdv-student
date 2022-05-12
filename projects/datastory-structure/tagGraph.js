@@ -101,7 +101,7 @@ let extent = d3.extent(data, function(d){
     .text(getTag)
     .attr("fill","white")
     .attr("transform", "rotate(90)")
-    .style("font-family", "sans-serif")
+    .style("font-family", "Times New Roman")
     // .style("opacity", 0)
 
   ;
