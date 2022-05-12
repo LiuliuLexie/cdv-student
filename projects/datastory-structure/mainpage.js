@@ -4,6 +4,15 @@ document.getElementById("button3").addEventListener("click", function(){window.l
 // document.getElementById("button4").addEventListener("click", function(){window.location.href="runtimeGraph.html";});
 document.getElementById("button5").addEventListener("click", function(){window.location.href="tagGraph.html";});
 
+const myTimeout = setTimeout(myGreeting, 180000);
+
+function myGreeting() {
+  document.getElementById("demo").src="scary.jpeg";
+}
+
+function myStopFunction() {
+  clearTimeout(myTimeout);
+}
 
 
 

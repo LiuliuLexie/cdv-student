@@ -99,3 +99,17 @@ body{
     /* margin-right: 10px; */
 }
 
+#specialbutton{
+    background-color: gray;
+}
+
+#demo{
+    position: absolute;
+    top: 50px;
+    left:220px;
+    right:auto;
+    /* text-align: center; */
+    width: 900px;
+    height: 450px;
+    z-index:999;
+}
